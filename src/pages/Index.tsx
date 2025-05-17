@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Services from "../components/Services";
+import About from "../components/About";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import { useLanguage } from "../context/LanguageContext";
 
 const Index = () => {
+  const { language } = useLanguage();
+  
+  useEffect(() => {
+    document.title = language === "en" ? "GeoInfo - Land Surveying Solutions" : "GeoInfo - Zgjidhje për Matjet e Tokës";
+  }, [language]);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-grow">
+        <Hero />
+        <Services />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 };
