@@ -31,9 +31,9 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Logo - now using medium size instead of small */}
           <div className="flex items-center">
-            <Logo size="small" className="py-1" />
+            <Logo size="medium" className="py-1" />
           </div>
 
           {/* Desktop navigation */}

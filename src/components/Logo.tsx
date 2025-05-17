@@ -9,11 +9,11 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({ className = "", size = "medium" }) => {
   const [processedImageUrl, setProcessedImageUrl] = useState<string | null>(null);
   
-  // Set size based on prop
+  // Updated size classes to be larger
   const sizeClasses = {
-    small: "h-8",
-    medium: "h-12",
-    large: "h-16",
+    small: "h-12", // Increased from h-8
+    medium: "h-16", // Increased from h-12
+    large: "h-24", // Increased from h-16
   };
   
   useEffect(() => {
