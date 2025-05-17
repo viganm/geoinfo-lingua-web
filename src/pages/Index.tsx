@@ -22,10 +22,10 @@ const Index = () => {
     if (!link) {
       const newLink = document.createElement("link");
       newLink.rel = "icon";
-      newLink.href = "/lovable-uploads/logo.png";
+      newLink.href = "favicon.ico";
       document.head.appendChild(newLink);
     } else {
-      link.href = "/lovable-uploads/logo.png";
+      link.href = "favicon.ico";
     }
   }, [language]);
 
