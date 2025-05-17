@@ -1,13 +1,12 @@
-
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import Logo from "./Logo";
-import { 
+import {
   DropdownMenu,
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuTrigger 
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Menu, X, Globe } from "lucide-react";
 
@@ -28,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg">
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-blue-800 via-blue-800 to-blue-800 text-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo - now using medium size instead of small */}
@@ -38,26 +37,26 @@ const Header = () => {
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex space-x-8">
-            <button 
-              onClick={() => scrollToSection('home')} 
+            <button
+              onClick={() => scrollToSection("home")}
               className="hover:text-orange-400 transition-colors"
             >
               {t("nav.home")}
             </button>
-            <button 
-              onClick={() => scrollToSection('services')} 
+            <button
+              onClick={() => scrollToSection("services")}
               className="hover:text-orange-400 transition-colors"
             >
               {t("nav.services")}
             </button>
-            <button 
-              onClick={() => scrollToSection('about')} 
+            <button
+              onClick={() => scrollToSection("about")}
               className="hover:text-orange-400 transition-colors"
             >
               {t("nav.about")}
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')} 
+            <button
+              onClick={() => scrollToSection("contact")}
               className="hover:text-orange-400 transition-colors"
             >
               {t("nav.contact")}
@@ -66,19 +65,23 @@ const Header = () => {
             {/* Language Selector */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="hover:bg-blue-800">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="hover:bg-blue-800"
+                >
                   <Globe className="h-5 w-5" />
-                  <span className="ml-2 hidden lg:inline">{t("language")}</span>
+                  {/* <span className="ml-2 hidden lg:inline">{t("language")}</span> */}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-32">
-                <DropdownMenuItem 
+                <DropdownMenuItem
                   className={language === "en" ? "bg-muted" : ""}
                   onClick={() => changeLanguage("en")}
                 >
                   English
                 </DropdownMenuItem>
-                <DropdownMenuItem 
+                <DropdownMenuItem
                   className={language === "sq" ? "bg-muted" : ""}
                   onClick={() => changeLanguage("sq")}
                 >
@@ -92,18 +95,22 @@ const Header = () => {
           <div className="md:hidden flex items-center">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="hover:bg-blue-800 mr-2">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="hover:bg-blue-800 mr-2"
+                >
                   <Globe className="h-5 w-5" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-32">
-                <DropdownMenuItem 
+                <DropdownMenuItem
                   className={language === "en" ? "bg-muted" : ""}
                   onClick={() => changeLanguage("en")}
                 >
                   English
                 </DropdownMenuItem>
-                <DropdownMenuItem 
+                <DropdownMenuItem
                   className={language === "sq" ? "bg-muted" : ""}
                   onClick={() => changeLanguage("sq")}
                 >
@@ -111,7 +118,7 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            
+
             <Button variant="ghost" size="icon" onClick={toggleMenu}>
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -129,25 +136,25 @@ const Header = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <button
               className="block w-full text-left px-3 py-2 hover:bg-blue-700 rounded"
-              onClick={() => scrollToSection('home')}
+              onClick={() => scrollToSection("home")}
             >
               {t("nav.home")}
             </button>
             <button
               className="block w-full text-left px-3 py-2 hover:bg-blue-700 rounded"
-              onClick={() => scrollToSection('services')}
+              onClick={() => scrollToSection("services")}
             >
               {t("nav.services")}
             </button>
             <button
               className="block w-full text-left px-3 py-2 hover:bg-blue-700 rounded"
-              onClick={() => scrollToSection('about')}
+              onClick={() => scrollToSection("about")}
             >
               {t("nav.about")}
             </button>
             <button
               className="block w-full text-left px-3 py-2 hover:bg-blue-700 rounded"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection("contact")}
             >
               {t("nav.contact")}
             </button>
