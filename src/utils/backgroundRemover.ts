@@ -1,3 +1,4 @@
+
 import { pipeline, env } from '@huggingface/transformers';
 
 // Configure transformers.js to always download models
@@ -46,7 +47,7 @@ export const removeBackground = async (imageElement: HTMLImageElement): Promise<
     
     // Resize image if needed and draw it to canvas
     const wasResized = resizeImageIfNeeded(canvas, ctx, imageElement);
-    console.log(`Image ${wasResized ? 'was' : was not'} resized. Final dimensions: ${canvas.width}x${canvas.height}`);
+    console.log(`Image ${wasResized ? 'was' : 'was not'} resized. Final dimensions: ${canvas.width}x${canvas.height}`);
     
     // Get image data as base64
     const imageData = canvas.toDataURL('image/jpeg', 0.8);
