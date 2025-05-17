@@ -1,7 +1,7 @@
 
 import { useLanguage } from "../context/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { Map, Ruler, Layers, LayersThree, Flag, Compass, MapPin } from "lucide-react";
+import { Map, Ruler, Layers, Layers3, Flag, Compass, MapPin } from "lucide-react";
 
 const Services = () => {
   const { t } = useLanguage();
@@ -23,7 +23,7 @@ const Services = () => {
       description: t("services.item3.description")
     },
     {
-      icon: <LayersThree className="h-10 w-10 text-blue-500" />,
+      icon: <Layers3 className="h-10 w-10 text-blue-500" />,
       title: t("services.item4.title"),
       description: t("services.item4.description")
     },
