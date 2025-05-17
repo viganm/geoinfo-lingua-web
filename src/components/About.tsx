@@ -37,7 +37,7 @@ const About = () => {
                 className="rounded-lg shadow-md object-cover h-48 w-full"
               />
               <img 
-                src="https://images.unsplash.com/photo-1582436416933-df2a692bd48e?q=80&w=1529&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?q=80&w=3498&auto=format&fit=crop" 
                 alt="Drone mapping"
                 className="rounded-lg shadow-md object-cover h-48 w-full"
               />
