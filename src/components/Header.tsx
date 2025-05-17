@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { Button } from "@/components/ui/button";
+import Logo from "./Logo";
 import { 
   DropdownMenu,
   DropdownMenuContent, 
@@ -32,9 +33,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="bg-orange-500 px-4 py-2 rounded-b-lg">
-              <h1 className="text-2xl font-bold">GeoInfo</h1>
-            </div>
+            <Logo size="small" className="py-1" />
           </div>
 
           {/* Desktop navigation */}

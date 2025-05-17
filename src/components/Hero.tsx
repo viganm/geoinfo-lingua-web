@@ -2,6 +2,7 @@
 import { useLanguage } from "../context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Map } from "lucide-react";
+import Logo from "./Logo";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -12,6 +13,9 @@ const Hero = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center py-16 lg:py-24">
             <div className="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
+              <div className="flex justify-center lg:justify-start mb-6">
+                <Logo size="large" />
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 {t("hero.title")}
               </h1>
@@ -35,8 +39,8 @@ const Hero = () => {
                   className="rounded-lg shadow-2xl max-h-[500px] w-full object-cover"
                 />
                 <div className="absolute -bottom-3 -left-3 bg-blue-200 h-24 w-24 rounded-full flex items-center justify-center">
-                  <div className="bg-orange-500 h-16 w-16 rounded-full flex items-center justify-center text-white font-bold">
-                    GEO
+                  <div className="h-20 w-20 flex items-center justify-center overflow-hidden rounded-full">
+                    <Logo size="small" />
                   </div>
                 </div>
               </div>

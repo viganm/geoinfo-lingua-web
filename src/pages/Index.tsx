@@ -12,7 +12,19 @@ const Index = () => {
   const { language } = useLanguage();
   
   useEffect(() => {
+    // Set page title based on language
     document.title = language === "en" ? "GeoInfo - Land Surveying Solutions" : "GeoInfo - Zgjidhje për Matjet e Tokës";
+    
+    // Set favicon using the GeoInfo logo
+    const link = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
+    if (!link) {
+      const newLink = document.createElement('link');
+      newLink.rel = 'icon';
+      newLink.href = '/lovable-uploads/d3651654-0cf0-43dd-b3dc-62870eada641.png';
+      document.head.appendChild(newLink);
+    } else {
+      link.href = '/lovable-uploads/d3651654-0cf0-43dd-b3dc-62870eada641.png';
+    }
   }, [language]);
 
   return (
